@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery css3人数统计数字翻页代码演示_大头网</title>
+<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+<style>
+.digit_point{font-size:30px;color:#fff;}
+.fl{float:left;}
+</style>
+</head>
+<body>
+
+<div class="dataStatistics dataStatistics1">
+	<div class="digit_set"></div>
+	<div class="digit_set"></div>
+	<div class="digit_set set_last"></div>
+</div>
+<div class="dataStatistics dataStatistics2">
+    <div class="digit_set"></div>
+    <div class="digit_set"></div>
+    <div class="digit_set set_last"></div>
+</div>
+<div class="dataStatistics dataStatistics3">
+    <div class="digit_set"></div>
+    <div class="digit_set"></div>
+     <div class="digit_set"></div>
+    <div class="digit_set"></div>
+     <div class="digit_set"></div>
+    <div class="digit_set set_last"></div>
+</div>
+
+<script type="text/javascript" src='js/jquery.js'></script>
+<script type="text/javascript" src="js/jquery.dataStatistics.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.dataStatistics1').dataStatistics({min:251,max:500,time:300000000,len:3});
+    $('.dataStatistics2').dataStatistics({min:251,max:500,time:300000000,len:3});
+    $('.dataStatistics3').dataStatistics({min:251251,max:500000,time:300000000,len:6});
+});
+</script>
+<!-- 代码 结束 -->
+
+</body>
+</html>

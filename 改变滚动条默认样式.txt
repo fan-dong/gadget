@@ -1,0 +1,9 @@
+$(function(){
+			//改变滚动条默认样式
+			$("html").niceScroll({ 
+				cursorcolor:"gray",
+				dblclickzoom: false,
+				cursoropacitymax:0.3
+			})
+			
+		})

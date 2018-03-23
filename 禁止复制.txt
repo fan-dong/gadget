@@ -1,0 +1,32 @@
+1.// 禁用右键菜单、复制、选择
+$(document).bind("contextmenu copy selectstart", function() {
+  return false;
+});
+
+2.// 禁用Ctrl+C和Ctrl+V（所有浏览器均支持）
+$(document).keydown(function(e) {
+  if(e.ctrlKey && (e.keyCode == 65 || e.keyCode == 67)) {
+    return false;
+  }
+});
+
+3.// 设置CSS禁止选择（如果写了下面的CSS则不需要这一段代码，新版浏览器支持）
+$(function() {
+  $("body").css({
+    "-moz-user-select":"none",
+    "-webkit-user-select":"none",
+    "-ms-user-select":"none",
+    "-khtml-user-select":"none",
+    "-o-user-select":"none",
+    "user-select":"none"
+  });
+})
+4.//防止禁用JavaScript后失效，可以写在CSS中（新版浏览器支持，并逐渐成为标准）：
+body {
+  -moz-user-select:none; /* Firefox私有属性 */
+  -webkit-user-select:none; /* WebKit内核私有属性 */
+  -ms-user-select:none; /* IE私有属性(IE10及以后) */
+  -khtml-user-select:none; /* KHTML内核私有属性 */
+  -o-user-select:none; /* Opera私有属性 */
+  user-select:none; /* CSS3属性 */
+}

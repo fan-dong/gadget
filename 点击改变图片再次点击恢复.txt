@@ -1,0 +1,14 @@
+	$('.starBox img').each(function(){
+				var flag = true;
+				$(this).click(function(){
+					if($(this).flag){
+						$(this).attr('src','img/redStar.png');
+						$(this).flag = false;
+					}else{
+						$(this).attr('src','img/grayStar.png');
+						$(this).flag = true;
+					}
+					
+				})
+			});
+

@@ -1,0 +1,10 @@
+<script>
+    //ËÑË÷¿ò×ÖÊıÏŞÖÆ
+	$('.search').blur(function  () {
+		var div_b = $('.search').val();
+		if($('.search').val().length>4){
+           var str = div_b.substr(0,4) + '...' ;
+		   $('.search').val(str);
+		}
+	})
+</script>
